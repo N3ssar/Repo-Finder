@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Repo Finder - Search for GitHub repositories by users or organizations. Find code repositories, open source projects, and developer profiles quickly and easily.">
+    <meta name="keywords"
+        content="github repository search, repo finder, github users, github organizations, code search, developer tools, open source projects, github api">
+    <meta name="author" content="Repo Finder">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Repo Finder - GitHub Repository Search Tool">
+    <meta property="og:description"
+        content="Find GitHub repositories by users or organizations. The fastest way to discover code repositories and open source projects.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://repo-finder.com">
+    <meta property="og:image" content="assets/images/repo-finder-social.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Repo Finder - GitHub Repository Search Tool">
+    <meta name="twitter:description"
+        content="Find GitHub repositories by users or organizations. The fastest way to discover code repositories and open source projects.">
+    <meta name="twitter:image" content="assets/images/repo-finder-social.png">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/repository-finder.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/repository-finder-180.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://repo-finder.com">
+    <title>Repo Finder - Search GitHub Repositories by Users & Organizations</title>
+</head>
+
+<body>
+    <header class="container">
+        <nav aria-label="Main navigation">
+            <a href="/" class="logo">
+                <img src="assets/images/repository-finder.svg" alt="Repo Finder Logo" width="40" height="40">
+                <span>Repo Finder</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Repository Finder</h1>
+        <p class="intro">Search for GitHub repositories by users or organizations. Find open source projects, code
+            examples, and developer profiles quickly and easily.</p>
+
+        <section class="search-section" aria-labelledby="search-heading">
+            <h2 id="search-heading" class="visually-hidden">Search for Repositories</h2>
+            <div class="relative">
+                <form class="search-form" aria-label="Repository search">
+                    <div class="choices" role="radiogroup" aria-labelledby="search-type-label">
+                        <div id="search-type-label" class="visually-hidden">Search Type</div>
+
+                        <input type="radio" name="choice" value="users" id="users" checked>
+                        <label for="users" tabindex="0">Users</label>
+
+                        <input type="radio" name="choice" value="orgs" id="org">
+                        <label for="org" tabindex="0">Organizations</label>
+                    </div>
+                    <input type="text" name="query" id="query" placeholder="Enter username or organization name"
+                        aria-label="Search query" required>
+                    <img src="assets/images/search.svg" alt="Search Icon">
+                    <button type="submit">Search</button>
+                </form>
+                <div class="loader hidden" aria-hidden="true"></div>
+                <p class="message" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <section class="results-section" aria-labelledby="results-heading">
+            <h2 id="results-heading" class="visually-hidden">Search Results</h2>
+            <div class="results" aria-live="polite">
+                <label for="query" class="start-info">Start typing to search for repositories...</label>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>&copy; <span id="current-year"></span> <a href="https://github.com/N3ssar" target="_blank">N3ssar.</a> Uses
+            GitHub API to
+            find repositories.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/scripts/main.js" defer type="module"></script>
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Repo Finder",
+        "url": "https://repo-finder.com",
+        "description": "Search for GitHub repositories by users or organizations. Find code repositories and open source projects quickly.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0"
+        }
+    }
+    </script>
+</body>
+
+</html>

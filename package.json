@@ -1,0 +1,17 @@
+{
+  "name": "repo-finder",
+  "version": "1.0.0",
+  "description": "organizations. The fastest way to discover code repositories and open source projects.",
+  "license": "ISC",
+  "author": "N3ssar",
+  "type": "commonjs",
+  "main": "./assets/scripts/main.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "vite": "^6.3.4"
+  }
+}
